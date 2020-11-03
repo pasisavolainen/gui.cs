@@ -5,6 +5,8 @@
     <AssemblyName>Terminal.Gui</AssemblyName>
     <DocumentationFile>bin\Release\Terminal.Gui.xml</DocumentationFile>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>embedded</DebugType>
     <!-- moved to ../Directory.Build.props -->
     <!-- <AssemblyVersion>0.89.0.0</AssemblyVersion> -->
   </PropertyGroup>
@@ -26,7 +28,7 @@
       * If StatusBar.Visible is set to false, TopLevel resizes correctly enabling hiding/showing of a StatusBar. UICatalog demonstrates.
       * New sample/demo app - ReactiveExample - Shows how to use reactive extensions and ReactiveUI with gui.cs. (Thanks @worldbeater)
       * BREAKING API CHANGE - Removed IEnumerable from View and Window. Use Subviews property instead. See #950.
-      
+
       v0.90 - "Feature Complete" pre-release of Terminal.Gui (aka gui.cs) 1.0. This release is a signficant upgrade from the previous published release (0.81). Most of the major changes and bug fixes are listed below. NOTE: This release includes breaking changes to the API; we will strive to avoid any more breaking changes before 1.0.
 
       What's new:
@@ -127,10 +129,6 @@
   <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
